@@ -14,10 +14,6 @@
     <body class="dashboard">
     @include('flash::message')
         <div id="page-wrapper">
-            <div id="loader">
-                <div id="loader-filler"></div>
-                <div id="loader-cover"></div>
-            </div>
             <!-- Header -->
                 <header id="header">
                     @yield('header')

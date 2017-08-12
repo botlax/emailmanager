@@ -119,41 +119,6 @@
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); });
 
-	// LOADER
-	function getRandomInt(min, max) {
-	    return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-
-	var min = 0, max = 5;
-	var loaded = false;
-
-	function load(){
-		if(!loaded){
-			if(min < 80){
-				var randInt = getRandomInt(min, max);
-				var duration = getRandomInt(200,1500);
-				$('#loader-filler').css({'width':''+300*(randInt/100)+'px'});
-				min = min + 10; max = max + 10;
-				setTimeout(load, duration);
-			}
-			else if (min < 95){
-				var randInt = getRandomInt(min, max);
-				var duration = getRandomInt(2000,4000);
-				$('#loader-filler').css({'width':''+300*(randInt/100)+'px'});
-				min = min + 5; max = max + 5;
-				setTimeout(load, duration);
-			}
-		}
-	}
-
-	load();
-
-	skel.on("load", function() {
-		loaded = true;
-		$('#loader-filler').css({'width':'300px'});
-		setTimeout(function(){
-			$('#loader').fadeOut('500');
-		},500);
-	});
+	
 
 })(jQuery);
